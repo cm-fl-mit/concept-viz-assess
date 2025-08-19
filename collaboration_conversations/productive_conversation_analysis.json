@@ -1,0 +1,4025 @@
+{
+  "people": [
+    {
+      "id": 0,
+      "name": "Speaker A",
+      "summary_states": ""
+    },
+    {
+      "id": 1,
+      "name": "Speaker B",
+      "summary_states": ""
+    }
+  ],
+  "utterance_features": [
+    {
+      "id": 100,
+      "name": "turn_duration",
+      "categories": [],
+      "scale": [
+        0,
+        300
+      ]
+    },
+    {
+      "id": 101,
+      "name": "word_count",
+      "categories": [],
+      "scale": [
+        0,
+        200
+      ]
+    },
+    {
+      "id": 200,
+      "name": "curiosity",
+      "categories": [
+        "diversive",
+        "epistemic",
+        "specific",
+        "social",
+        "perceptual"
+      ],
+      "scale": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": 201,
+      "name": "uncertainty",
+      "categories": [
+        "hedging",
+        "explicit_uncertainty",
+        "productive_confusion"
+      ],
+      "scale": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": 300,
+      "name": "agreement",
+      "categories": [],
+      "scale": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": 301,
+      "name": "disagreement",
+      "categories": [],
+      "scale": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": 302,
+      "name": "new_idea",
+      "categories": [],
+      "scale": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": 303,
+      "name": "collaborative_building",
+      "categories": [],
+      "scale": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": 304,
+      "name": "question",
+      "categories": [],
+      "scale": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": 305,
+      "name": "meta_cognitive",
+      "categories": [],
+      "scale": [
+        0,
+        10
+      ]
+    }
+  ],
+  "response_features": [
+    {
+      "name": "responsivity_type",
+      "categories": [
+        "responsive_mechanical",
+        "responsive_substantive"
+      ],
+      "scale": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "responsivity_strength",
+      "categories": [],
+      "scale": [
+        0,
+        3
+      ]
+    },
+    {
+      "name": "concept_building",
+      "categories": [
+        "extends",
+        "challenges",
+        "clarifies",
+        "synthesizes"
+      ],
+      "scale": [
+        0,
+        3
+      ]
+    }
+  ],
+  "summary_features": [],
+  "turns": [
+    {
+      "id": 1,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Yay. Awesome. Okay, let me do split screen so I can both see you and then also see the project. Awesome. Okay, I was wondering what you gleaned from your presentation.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 14.34
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 33
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 7
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 8
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 6
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 8
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 22.64,
+      "end_time": 36.98,
+      "segments": [
+        {
+          "type": "curiosity_expression",
+          "subtype": "social",
+          "text": "I was wondering what you gleaned from your presentation",
+          "confidence": 0.9
+        },
+        {
+          "type": "questioning",
+          "text": "what you gleaned from your presentation",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Right, so mine. So the one I got was ne network structure and properties. So this key metric of like, what are the most important slash connected nodes? There's. I have a slide about like identifying important nodes and like what properties can make a node important. So we can definitely use that for the deliverable. And then I think there was also a slide about failures. Yeah, there was like a little bit about like depending on how we structure the network, like how. Where. Where the failure points can be. So they gave like three examples of network patterns. Um, I don't know that any of them are useful for this problem though. So yeah, at the very least we can do the like important connected notes thing. How about yours?",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 53.02
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 128
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 5
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 6
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 7
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 6
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 8
+        }
+      ],
+      "start_time": 36.98,
+      "end_time": 90.0,
+      "segments": [
+        {
+          "type": "uncertainty_marker",
+          "subtype": "explicit_uncertainty",
+          "text": "I don't know that any of them are useful for this problem though",
+          "confidence": 0.9
+        },
+        {
+          "type": "questioning",
+          "text": "How about yours?",
+          "confidence": 0.8
+        },
+        {
+          "type": "collaborative_building",
+          "text": "we can definitely use that for the deliverable",
+          "confidence": 0.7
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "I think there was also a slide about failures",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Perfect. Yeah, I don't think mine had anything about metrics. It's really about efficiency. Like how. How do we. Yeah. Plan for. I think there's one for planning for failures. And then like. Yeah, how can we make it as efficient and quick as possible to different metrics? So let's see like flow and bottlenecks and then basically finding a path and being like efficient about it.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 26.23
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 64
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 4
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 5
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 6
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 3
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 7
+        }
+      ],
+      "start_time": 90.0,
+      "end_time": 116.23,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Perfect",
+          "confidence": 0.9
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I think there's one for planning for failures",
+          "confidence": 0.7
+        },
+        {
+          "type": "collaborative_building",
+          "text": "how can we make it as efficient and quick as possible",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Okay. Yeah, that sounds super useful for this one. Let's see.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 3.32
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 11
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 116.23,
+      "end_time": 119.55,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "that sounds super useful for this one",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Awesome. Let me zoom in because I can barely see it. Okay. By optimizing movement between classes. Torn activities clusters, system, limited budget. Your campus, do you have any like main ways of transportation other than walking?",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 23.07
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 37
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 8
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 2
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 5
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 9
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 119.55,
+      "end_time": 142.62,
+      "segments": [
+        {
+          "type": "curiosity_expression",
+          "subtype": "specific",
+          "text": "do you have any like main ways of transportation other than walking?",
+          "confidence": 0.9
+        },
+        {
+          "type": "questioning",
+          "text": "do you have any like main ways of transportation other than walking?",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "We have a shuttle system that I have many gripes about because it only goes in one direction. So it's like if you want to go from like, you know, let's say a dorm to your class, then it's like super quick. It's like one, two minutes. But then if you want to go from the class to your dorm, you have to go like all the way around the rest of campus. So some bi directionality would be kind of nice for this. But I don't know what this limited budget means necessarily. So we'll see. How about you?",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 35.44
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 92
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 5
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 6
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 8
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 6
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 6
+        }
+      ],
+      "start_time": 142.62,
+      "end_time": 178.06,
+      "segments": [
+        {
+          "type": "new_idea",
+          "text": "some bi directionality would be kind of nice for this",
+          "confidence": 0.8
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "explicit_uncertainty",
+          "text": "I don't know what this limited budget means necessarily",
+          "confidence": 0.9
+        },
+        {
+          "type": "questioning",
+          "text": "How about you?",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Yes, we also have a shuttle and I want to say it's the same thing. I like take matters into my own hands. I like walk everywhere.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 7.68
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 26
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 3
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 8
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 5
+        }
+      ],
+      "start_time": 178.06,
+      "end_time": 185.74,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yes, we also have a shuttle and I want to say it's the same thing",
+          "confidence": 0.8
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I want to say it's the same thing",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Yeah, no, me too. Yeah.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 2.32
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 5
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 3
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 185.74,
+      "end_time": 188.06,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah, no, me too",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "At my sibling's campus. So my sibling is in Japan right now. They have rentable bikes and I don't think they have a shuttle but they have rentable bikes. So that could be helpful. And I don't know about you, but there's like a million electric scooters on my campus.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 14.03
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 44
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 6
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 4
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 8
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 5
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 188.06,
+      "end_time": 202.09,
+      "segments": [
+        {
+          "type": "new_idea",
+          "text": "They have rentable bikes",
+          "confidence": 0.8
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I don't think they have a shuttle",
+          "confidence": 0.6
+        },
+        {
+          "type": "curiosity_expression",
+          "subtype": "social",
+          "text": "I don't know about you, but",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Oh yeah. Oh yeah.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 2.08
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 4
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 4
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 202.09,
+      "end_time": 204.17,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Oh yeah. Oh yeah",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Like I hope I don't get run over. Haha. Okay, so let's see. Bidirectionality of buses. It's good. I think that's good. Shuttle, but that's okay. Rentable bikes. And then we probably need some bike pass so people don't get run over.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 29.18
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 41
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 2
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 8
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 7
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 9
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 6
+        }
+      ],
+      "start_time": 204.17,
+      "end_time": 233.35,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "I think that's good",
+          "confidence": 0.8
+        },
+        {
+          "type": "new_idea",
+          "text": "we probably need some bike pass so people don't get run over",
+          "confidence": 0.8
+        },
+        {
+          "type": "collaborative_building",
+          "text": "so let's see. Bidirectionality of buses",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "I guess for our network we might have to have like, it's kind of unconventional, but we might need to have like multiple edges between two nodes. If only because I don't know how else to convey like this is a bikeable path versus this is like a shuttle route versus this is like walkable or something like that.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 19.86
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 54
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 7
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 7
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 9
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 8
+        }
+      ],
+      "start_time": 233.35,
+      "end_time": 253.21,
+      "segments": [
+        {
+          "type": "new_idea",
+          "text": "we might need to have like multiple edges between two nodes",
+          "confidence": 0.9
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I guess",
+          "confidence": 0.7
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "explicit_uncertainty",
+          "text": "I don't know how else to convey",
+          "confidence": 0.8
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "it's kind of unconventional, but",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "No, that makes perfect sense. Especially with like dynamics. It's like we want to have, if we have a dense network, the more likely we'll have an optimized path. So that's a great idea.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 11.12
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 36
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 10
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 9
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 7
+        }
+      ],
+      "start_time": 253.21,
+      "end_time": 264.33,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "that makes perfect sense",
+          "confidence": 0.9
+        },
+        {
+          "type": "agreement",
+          "text": "So that's a great idea",
+          "confidence": 0.9
+        },
+        {
+          "type": "collaborative_building",
+          "text": "Especially with like dynamics",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Should we start by just making like I guess, seven circles for the dorm clusters and academic areas?",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 7.28
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 17
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 2
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 6
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 8
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 264.33,
+      "end_time": 271.61,
+      "segments": [
+        {
+          "type": "questioning",
+          "text": "Should we start by just making like I guess, seven circles",
+          "confidence": 0.8
+        },
+        {
+          "type": "collaborative_building",
+          "text": "Should we start by",
+          "confidence": 0.9
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I guess",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Sure, that's a great idea. Are you cool with doing that?",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 3.1
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 10
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 7
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 271.61,
+      "end_time": 274.71,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Sure, that's a great idea",
+          "confidence": 0.9
+        },
+        {
+          "type": "questioning",
+          "text": "Are you cool with doing that?",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Yeah, I can do that. Awesome. Oops. Not that. Delete.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 35.37
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 10
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 8
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 6
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 274.71,
+      "end_time": 310.08,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah, I can do that. Awesome",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Three dorms, four academic. Okay. I feel like a lot of colleges have like dorms generally on the outsides and then like all the academic in like one area. So I'm just, I'm gonna set it up like that.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 33.37
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 36
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 7
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 5
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 8
+        }
+      ],
+      "start_time": 310.08,
+      "end_time": 343.45,
+      "segments": [
+        {
+          "type": "meta_cognitive",
+          "text": "I feel like a lot of colleges have like dorms generally on the outsides",
+          "confidence": 0.8
+        },
+        {
+          "type": "new_idea",
+          "text": "I'm gonna set it up like that",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Perfect. No, it's a great idea. My school is the same way. And I'll make a list of like every possible like transportation thing we can think of. So we had buses. The main thing say shuttles because I don't think I'm selling buses. Right. Bikes.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 57.95
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 43
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 3
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 6
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 9
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 5
+        }
+      ],
+      "start_time": 343.45,
+      "end_time": 401.4,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Perfect. No, it's a great idea. My school is the same way",
+          "confidence": 0.9
+        },
+        {
+          "type": "collaborative_building",
+          "text": "I'll make a list of like every possible like transportation thing we can think of",
+          "confidence": 0.9
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I don't think I'm selling buses",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Okay. I guess do we want this campus to be a like car campus? Like do people drive to classes? I feel like that's less common at my school.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 15.76
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 26
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 7
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 4
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 6
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 8
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 6
+        }
+      ],
+      "start_time": 401.4,
+      "end_time": 417.16,
+      "segments": [
+        {
+          "type": "questioning",
+          "text": "do we want this campus to be a like car campus?",
+          "confidence": 0.8
+        },
+        {
+          "type": "questioning",
+          "text": "Like do people drive to classes?",
+          "confidence": 0.8
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I guess",
+          "confidence": 0.6
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "I feel like that's less common at my school",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Yeah, same. Everything's pretty walkable. So car as backup or like since we're already doing bus routes, kind of like I guess a fail safe and like considering bottlenecking stuff. So cart as little extra consideration. Awesome. So I guess we drill the nodes of like Trying to think of, like, where to put a bike path. I guess it would, like, coincide with, like, where people walk and stuff, since it's not directly the road. And then this is. This is hard to, like, optimize because, like, I'm sure with your school too, it's like, you know, it. The bus goes around the perimeter, so there's only a little bit of walking. But it's like, if we can be more efficient about where the bus goes, like, the better.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 53.83
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 103
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 6
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 7
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 8
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 8
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 9
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 9
+        }
+      ],
+      "start_time": 417.16,
+      "end_time": 470.99,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah, same",
+          "confidence": 0.8
+        },
+        {
+          "type": "new_idea",
+          "text": "So car as backup or like since we're already doing bus routes",
+          "confidence": 0.8
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "This is hard to, like, optimize because",
+          "confidence": 0.8
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "Trying to think of, like, where to put a bike path",
+          "confidence": 0.8
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I guess we drill the nodes",
+          "confidence": 0.6
+        },
+        {
+          "type": "collaborative_building",
+          "text": "if we can be more efficient about where the bus goes, like, the better",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Yeah. Yeah. Okay. Maybe we can start by having, like, different colors for the different types of paths.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 10.39
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 17
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 2
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 6
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 8
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 470.99,
+      "end_time": 481.38,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah. Yeah",
+          "confidence": 0.7
+        },
+        {
+          "type": "new_idea",
+          "text": "Maybe we can start by having, like, different colors for the different types of paths",
+          "confidence": 0.9
+        },
+        {
+          "type": "collaborative_building",
+          "text": "we can start by having",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Good idea.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 27.83
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 2
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 6
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 481.38,
+      "end_time": 509.21,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Good idea",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Yeah. B. I'm just wondering, is that important how long our paths are like the lines itself or is it just for resolution? Like, I don't know, because it's quite hard to like make it.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 105.0
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 34
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 8
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 8
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 5
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 9
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 7
+        }
+      ],
+      "start_time": 509.21,
+      "end_time": 614.21,
+      "segments": [
+        {
+          "type": "curiosity_expression",
+          "subtype": "epistemic",
+          "text": "I'm just wondering, is that important how long our paths are",
+          "confidence": 0.9
+        },
+        {
+          "type": "questioning",
+          "text": "is that important how long our paths are",
+          "confidence": 0.9
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "explicit_uncertainty",
+          "text": "I don't know, because it's quite hard to like make it",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "In my. My presentation. Oh no, not in my presentation. And the like, the first presentation I remember we were talking about like weights. So I guess if we're not assigning any weights to these paths, then better. I'm not sure.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 363.55
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 39
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 8
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 4
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 6
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 8
+        }
+      ],
+      "start_time": 614.21,
+      "end_time": 977.76,
+      "segments": [
+        {
+          "type": "uncertainty_marker",
+          "subtype": "explicit_uncertainty",
+          "text": "I'm not sure",
+          "confidence": 0.9
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I guess if we're not assigning any weights",
+          "confidence": 0.7
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "I remember we were talking about like weights",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Yeah, yeah, yeah. To make more efficient. And then also I try to like, think how to structure it more because like, so many things coming up in my head now. Like, what if the computer doesn't work? You need a second computer or you need to be able to do that from your private phone. Maybe because it's an emergency. Yeah.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 25.15
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 56
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 7
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 5
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 6
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 8
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 6
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 6
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 9
+        }
+      ],
+      "start_time": 977.76,
+      "end_time": 1002.91,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah, yeah, yeah",
+          "confidence": 0.7
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "I try to like, think how to structure it more because like, so many things coming up in my head now",
+          "confidence": 0.9
+        },
+        {
+          "type": "curiosity_expression",
+          "subtype": "diversive",
+          "text": "what if the computer doesn't work?",
+          "confidence": 0.8
+        },
+        {
+          "type": "new_idea",
+          "text": "You need a second computer or you need to be able to do that from your private phone",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "So like here. So emergency itself should like, send different. Send messages through different, like, ways of communication.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 287.96
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 19
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 7
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 5
+        }
+      ],
+      "start_time": 1002.91,
+      "end_time": 1290.87,
+      "segments": [
+        {
+          "type": "collaborative_building",
+          "text": "So like here. So emergency itself should like, send different",
+          "confidence": 0.8
+        },
+        {
+          "type": "new_idea",
+          "text": "Send messages through different, like, ways of communication",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Okay. Red. Red biking path. Yeah, just like, boom. Like that.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 18.48
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 11
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 5
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 6
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 1290.87,
+      "end_time": 1309.35,
+      "segments": [
+        {
+          "type": "new_idea",
+          "text": "Red biking path",
+          "confidence": 0.7
+        },
+        {
+          "type": "collaborative_building",
+          "text": "Yeah, just like, boom. Like that",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Yeah, that makes sense.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 7.37
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 4
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 6
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 1309.35,
+      "end_time": 1316.72,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah, that makes sense",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Maybe it would go by the dorms as well. I don't know. Actually, this way. Like, that. Is that what you were envisioning?",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 16.4
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 20
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 6
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 5
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 5
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 8
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 1316.72,
+      "end_time": 1333.12,
+      "segments": [
+        {
+          "type": "new_idea",
+          "text": "Maybe it would go by the dorms as well",
+          "confidence": 0.7
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "explicit_uncertainty",
+          "text": "I don't know",
+          "confidence": 0.8
+        },
+        {
+          "type": "questioning",
+          "text": "Is that what you were envisioning?",
+          "confidence": 0.8
+        },
+        {
+          "type": "curiosity_expression",
+          "subtype": "social",
+          "text": "Is that what you were envisioning?",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Yeah, that actually makes sense since, like, initially I was thinking, like, just to change some of these walking paths to biking paths. But, like, what you did kind of make sense, though, because, like, I feel like it would be, like, more like. Because it would, like, go straight from one place to another.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 19.86
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 50
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 9
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 8
+        }
+      ],
+      "start_time": 1333.12,
+      "end_time": 1352.98,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah, that actually makes sense",
+          "confidence": 0.9
+        },
+        {
+          "type": "collaborative_building",
+          "text": "what you did kind of make sense, though",
+          "confidence": 0.8
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "initially I was thinking, like, just to change some of these walking paths",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Okay, here's the thing. I think you can still walk down these bike paths, but I think it makes sense to, like, differentiate. Like, these are, like, very simple, like, low maintenance paths versus, like, this is, like a key central path.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 16.09
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 41
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 2
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 8
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 7
+        }
+      ],
+      "start_time": 1360.98,
+      "end_time": 1377.07,
+      "segments": [
+        {
+          "type": "new_idea",
+          "text": "I think you can still walk down these bike paths, but I think it makes sense to, like, differentiate",
+          "confidence": 0.8
+        },
+        {
+          "type": "collaborative_building",
+          "text": "here's the thing",
+          "confidence": 0.7
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "I think it makes sense to, like, differentiate",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Yeah, that. That's kind of what what I was. Was thinking.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 4.24
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 10
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 6
+        }
+      ],
+      "start_time": 1377.07,
+      "end_time": 1381.31,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah, that. That's kind of what what I was. Was thinking",
+          "confidence": 0.9
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "That's kind of what what I was. Was thinking",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Yeah. So that makes a lot of sense because I. I mean, you can walk across a grassy field. Like, you can. You can hypotenuse anything when you're just, like, wandering around, but a bike, you can't really do that, so.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 38.97
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 39
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 8
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 6
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 7
+        }
+      ],
+      "start_time": 1381.31,
+      "end_time": 1420.28,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah. So that makes a lot of sense",
+          "confidence": 0.8
+        },
+        {
+          "type": "collaborative_building",
+          "text": "So that makes a lot of sense because",
+          "confidence": 0.8
+        },
+        {
+          "type": "new_idea",
+          "text": "you can walk across a grassy field. Like, you can. You can hypotenuse anything",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "Yes, that does make sense. And then I guess the. The path between the dorms can be left as walking paths, like, because I imagine they won't be very far apart, I hope.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 15.57
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 32
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 4
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 8
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 6
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 6
+        }
+      ],
+      "start_time": 1420.28,
+      "end_time": 1435.85,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yes, that does make sense",
+          "confidence": 0.8
+        },
+        {
+          "type": "new_idea",
+          "text": "The path between the dorms can be left as walking paths",
+          "confidence": 0.7
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I guess",
+          "confidence": 0.6
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I hope",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "Yeah. Yeah, actually, it makes more sense.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 44.97
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 7
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 0
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 9
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 7
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 0
+        }
+      ],
+      "start_time": 1435.85,
+      "end_time": 1480.85,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "Yeah. Yeah, actually, it makes more sense",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "speaker_id": 0,
+      "speaker": "Speaker A",
+      "text": "I'm trying to think about what. What I learned through the. The slideshow.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 7.6
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 12
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 6
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 0
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 0
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 0
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 0
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 9
+        }
+      ],
+      "start_time": 1480.85,
+      "end_time": 1488.45,
+      "segments": [
+        {
+          "type": "meta_cognitive",
+          "text": "I'm trying to think about what. What I learned through the. The slideshow",
+          "confidence": 0.9
+        },
+        {
+          "type": "curiosity_expression",
+          "subtype": "epistemic",
+          "text": "I'm trying to think about what. What I learned",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "speaker_id": 1,
+      "speaker": "Speaker B",
+      "text": "I know. Same. I'm like, which of these is like a more important note? The shuttle stop, I guess most connected.",
+      "features": [
+        {
+          "feature_id": 100,
+          "name": "turn_duration",
+          "value": 0
+        },
+        {
+          "feature_id": 101,
+          "name": "word_count",
+          "value": 20
+        },
+        {
+          "feature_id": 200,
+          "name": "curiosity",
+          "value": 6
+        },
+        {
+          "feature_id": 201,
+          "name": "uncertainty",
+          "value": 4
+        },
+        {
+          "feature_id": 300,
+          "name": "agreement",
+          "value": 7
+        },
+        {
+          "feature_id": 301,
+          "name": "disagreement",
+          "value": 0
+        },
+        {
+          "feature_id": 302,
+          "name": "new_idea",
+          "value": 0
+        },
+        {
+          "feature_id": 303,
+          "name": "collaborative_building",
+          "value": 8
+        },
+        {
+          "feature_id": 304,
+          "name": "question",
+          "value": 7
+        },
+        {
+          "feature_id": 305,
+          "name": "meta_cognitive",
+          "value": 8
+        }
+      ],
+      "start_time": 1488.45,
+      "end_time": 1488.45,
+      "segments": [
+        {
+          "type": "agreement",
+          "text": "I know. Same",
+          "confidence": 0.8
+        },
+        {
+          "type": "questioning",
+          "text": "which of these is like a more important note?",
+          "confidence": 0.8
+        },
+        {
+          "type": "uncertainty_marker",
+          "subtype": "hedging",
+          "text": "I guess most connected",
+          "confidence": 0.6
+        },
+        {
+          "type": "meta_cognitive",
+          "text": "I'm like, which of these is like a more important note?",
+          "confidence": 0.8
+        },
+        {
+          "type": "collaborative_building",
+          "text": "I know. Same",
+          "confidence": 0.8
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "collaborative_building"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 1.8
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "question"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "new_idea"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 0
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 1
+        },
+        {
+          "name": "concept_building",
+          "value": 0
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0.5
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 0
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 1
+        },
+        {
+          "name": "concept_building",
+          "value": 0
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "new_idea"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "source": 11,
+      "target": 12,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 3
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 3.4
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "collaborative_building"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "source": 12,
+      "target": 13,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "new_idea"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "collaborative_building"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "source": 15,
+      "target": 16,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "source": 17,
+      "target": 18,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "meta_cognitive"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "source": 18,
+      "target": 19,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 2.7
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "source": 19,
+      "target": 20,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 3
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 3.1
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "question"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "source": 20,
+      "target": 21,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "collaborative_building"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "source": 21,
+      "target": 22,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "new_idea"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "source": 23,
+      "target": 24,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "question"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "source": 24,
+      "target": 25,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 1.7
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "meta_cognitive"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "source": 25,
+      "target": 26,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "meta_cognitive"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "source": 27,
+      "target": 28,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "collaborative_building"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "source": 28,
+      "target": 29,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 1.3
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "source": 29,
+      "target": 30,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "question"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "source": 30,
+      "target": 31,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 3
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "source": 31,
+      "target": 32,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "new_idea"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "source": 32,
+      "target": 33,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "source": 33,
+      "target": 34,
+      "source_speaker_id": 1,
+      "target_speaker_id": 0,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "source": 34,
+      "target": 35,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 2
+        },
+        {
+          "name": "concept_building",
+          "value": 1
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "agreement"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "source": 36,
+      "target": 37,
+      "source_speaker_id": 0,
+      "target_speaker_id": 1,
+      "features": [
+        {
+          "name": "responsivity_type",
+          "value": 1
+        },
+        {
+          "name": "responsivity_strength",
+          "value": 3
+        },
+        {
+          "name": "concept_building",
+          "value": 2
+        },
+        {
+          "name": "curiosity_trigger_strength",
+          "value": 0.8
+        },
+        {
+          "name": "source_interaction_type",
+          "value": "meta_cognitive"
+        },
+        {
+          "name": "target_curiosity_response",
+          "value": 6
+        }
+      ]
+    }
+  ]
+}
