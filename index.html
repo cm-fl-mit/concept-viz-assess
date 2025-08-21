@@ -1,0 +1,575 @@
+/* merged index.html for combining visualization with linked transcript, and survey collection format linking back to GSheets */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization Survey</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', inRoboto, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.5;
+        }
+
+        /* Progress Bar */
+        #progress-container {
+            background: white;
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        #progress-fill {
+            height: 100%;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+            width: 0%;
+        }
+
+        /* Main Layout */
+        #main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Visualization Section */
+        .visualization-section {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .main-viz-content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .visualization-panel {
+            flex: 2;
+        }
+
+        .transcript-panel {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .visualization {
+            min-height: 400px;
+        }
+
+        .network-container, .timeline-container {
+            width: 100%;
+            height: 400px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Transcript Styles */
+        .transcript-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: 400px;
+            overflow-y: auto;
+            padding: 15px;
+            background: #fafafa;
+        }
+
+        .transcript-turn {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            background: white;
+            border-left: 4px solid #ddd;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .transcript-turn:hover {
+            background: #f0f8ff;
+            border-left-color: #007acc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .transcript-turn.highlighted {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+            box-shadow: 0 2px 8px rgba(255,193,7,0.3);
+        }
+
+        .turn-speaker {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .turn-text {
+            font-size: 13px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .turn-time {
+            font-size: 11px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        /* Legend */
+        .legend {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .legend-item {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .legend-color {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 4px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        /* D3 Visualization Styles */
+        .node {
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+            stroke-width: 2;
+        }
+
+        .timeline-row {
+            fill: none;
+            stroke: #ddd;
+            stroke-width: 1;
+        }
+
+        .timeline-turn {
+            stroke: #fff;
+            stroke-width: 1;
+            rx: 3;
+        }
+
+        .timeline-turn:hover {
+            cursor: pointer;
+        }
+
+        .responsive-connection {
+            pointer-events: none;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .edge-tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            max-width: 300px;
+            pointer-events: none;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .tooltip-speaker {
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: #ffc107;
+        }
+
+        .tooltip-text {
+            line-height: 1.3;
+            margin-bottom: 6px;
+        }
+
+        .tooltip-arrow {
+            font-size: 10px;
+            color: #888;
+        }
+
+        /* Questions Section */
+        #questions-section {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            padding: 2rem;
+        }
+
+        #questions-container {
+            margin-bottom: 2rem;
+        }
+
+        .question-block {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            background: #fafafa;
+        }
+
+        .question-block h3 {
+            color: #495057;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .question-block p {
+            margin-bottom: 1rem;
+            color: #212529;
+            line-height: 1.6;
+        }
+
+        /* Question Options */
+        .options {
+            margin: 1rem 0;
+        }
+
+        .option {
+            display: block;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .option:hover {
+            background-color: #e9ecef;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        /* Confidence Rating */
+        .confidence {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+        }
+
+        .confidence label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .confidence input[type="range"] {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        /* Text Areas */
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 0.75rem;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        /* Navigation Controls */
+        #navigation-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .nav-btn {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid #007bff;
+            background: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .nav-btn:disabled {
+            background: #6c757d;
+            border-color: #6c757d;
+            cursor: not-allowed;
+        }
+
+        /* Loading Overlay */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        #loading-overlay.hidden {
+            display: none !important;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e9ecef;
+            border-left: 4px solid #007bff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-viz-content {
+                flex-direction: column;
+            }
+            
+            .visualization-panel,
+            .transcript-panel {
+                min-width: auto;
+            }
+            
+            .transcript-container {
+                height: 300px;
+            }
+            
+            #main-content {
+                padding: 1rem;
+            }
+        }
+
+        /* Additional styles for survey enhancement */
+        .likert-scale {
+            margin: 1rem 0;
+        }
+
+        .scale-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .likert-slider {
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+        .scale-numbers {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+
+        .ranking-items {
+            margin: 1rem 0;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .ranking-select {
+            margin-right: 1rem;
+            padding: 0.25rem;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            width: 80px;
+        }
+
+        .ranking-text {
+            flex: 1;
+        }
+
+        .confidence-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-top: 0.25rem;
+        }
+
+        .static-image-placeholder {
+            background: #e9ecef !important;
+            color: #6c757d;
+            font-style: italic;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Progress Bar -->
+        <div id="progress-container">
+            <div class="progress-info">
+                <span id="progress-text">Page 1 of 6</span>
+                <span id="progress-percentage">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div id="main-content">
+            <!-- Visualization Section -->
+            <div class="visualization-section">
+                <div class="main-viz-content">
+                    <div class="visualization-panel">
+                        <div class="visualization">
+                            <div id="network-container" class="network-container"></div>
+                            <div id="timeline-container" class="timeline-container hidden"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="transcript-panel">
+                        <h3 style="margin-top: 0; margin-bottom: 15px; font-size: 16px;">Conversation Transcript</h3>
+                        <div id="transcript-container" class="transcript-container">
+                            <!-- Transcript content will be populated here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Color Code Legend -->
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #4CAF50;"></span>
+                        Agreement
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #F44336;"></span>
+                        Disagreement
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #2196F3;"></span>
+                        New Idea
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #FF9800;"></span>
+                        Collaborative Building
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #9C27B0;"></span>
+                        Curiosity
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #607D8B;"></span>
+                        Uncertainty
+                    </div>
+                </div>
+            </div>
+
+            <!-- Survey Questions Section -->
+            <div id="questions-section">
+                <div id="questions-container">
+                    <!-- Survey questions will be loaded here -->
+                </div>
+                
+                <div id="navigation-controls">
+                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                    <button id="next-btn" class="nav-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils/dataCapture.js"></script>
+    <script src="js/utils/conditionAssignment.js"></script>
+    <script src="js/components/ConversationTranscript.js"></script>
+    <script src="js/components/EnhancedVisualization.js"></script>
+    <script src="js/components/SurveyQuestion.js"></script>
+    <script src="js/main-merged.js"></script>
+</body>
+</html>
