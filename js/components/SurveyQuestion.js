@@ -8,21 +8,22 @@ class SurveyQuestion {
         this.responses = {};
     }
 
-    // Load all survey questions based on assessment categories
+    // Load all survey questions
     loadQuestions() {
         this.questions = [
-            // Page 1: Basic Visualization Effectiveness (Questions 1-4)
+            // Page 1: Visual Encoding Comprehension
             {
                 id: 'q1',
                 page: 1,
                 category: 'effectiveness',
                 type: 'multiple_choice',
-                question: 'Which node in the visualization represents the most connected element in the conversation?',
+                question: 'Which interaction type appears most frequently in this conversation?',
                 options: [
-                    { value: 'speaker-a', text: 'Speaker A' },
-                    { value: 'speaker-b', text: 'Speaker B' },
-                    { value: 'network-structure', text: 'Network Structure topic' },
-                    { value: 'transportation', text: 'Transportation topic' }
+                    { value: 'agreement', text: 'Agreement' },
+                    { value: 'collaborative-building', text: 'Collaborative building' },
+                    { value: 'curiosity', text: 'Curiosity' },
+                    { value: 'uncertainty', text: 'Uncertainty' },
+                    { value: 'disagreement', text: 'Disagreement' }
                 ],
                 hasConfidence: true
             },
@@ -31,12 +32,12 @@ class SurveyQuestion {
                 page: 1,
                 category: 'effectiveness',
                 type: 'multiple_choice',
-                question: 'What type of connection was most frequent between nodes in the visualization?',
+                question: 'Approximately how many instances of "disagreement" can you identify?',
                 options: [
-                    { value: 'discusses', text: 'Discusses (speaker to topic)' },
-                    { value: 'relates-to', text: 'Relates-to (topic to topic)' },
-                    { value: 'collaborates', text: 'Collaborates (speaker to speaker)' },
-                    { value: 'leads-to', text: 'Leads-to (sequential topics)' }
+                    { value: '0-3', text: '0-3' },
+                    { value: '4-7', text: '4-7' },
+                    { value: '8-11', text: '8-11' },
+                    { value: 'more-than-11', text: 'More than 11' }
                 ],
                 hasConfidence: true
             },
@@ -45,151 +46,200 @@ class SurveyQuestion {
                 page: 1,
                 category: 'effectiveness',
                 type: 'multiple_choice',
-                question: 'What happened after the discussion about transportation options?',
+                question: 'Which interaction type most commonly leads to "collaborative building"?',
                 options: [
-                    { value: 'bike-paths', text: 'Focus shifted to bike paths as a solution' },
-                    { value: 'shuttle-critique', text: 'Detailed critique of shuttle systems' },
-                    { value: 'network-theory', text: 'Return to network theory concepts' },
-                    { value: 'project-planning', text: 'Immediate project implementation planning' }
-                ],
-                hasConfidence: true
-            },
-            {
-                id: 'q4',
-                page: 1,
-                category: 'effectiveness',
-                type: 'multiple_choice',
-                question: 'Which visual property best indicates node importance in this network?',
-                options: [
-                    { value: 'size', text: 'Node size' },
-                    { value: 'color', text: 'Node color' },
-                    { value: 'connections', text: 'Number of connections' },
-                    { value: 'position', text: 'Central position' }
+                    { value: 'agreement', text: 'Agreement' },
+                    { value: 'disagreement', text: 'Disagreement' },
+                    { value: 'curiosity', text: 'Curiosity' },
+                    { value: 'uncertainty', text: 'Uncertainty' },
+                    { value: 'challenge', text: 'Challenge' },
+                    { value: 'cannot-determine', text: 'Cannot determine' }
                 ],
                 hasConfidence: true
             },
 
-            // Page 2: More Effectiveness Questions (Questions 5-8)
+            // Page 2: Pattern Recognition
             {
-                id: 'q5',
+                id: 'q5_cycles',
                 page: 2,
-                category: 'effectiveness',
-                type: 'likert',
-                question: 'How easy was it to identify the main speakers using the visualization?',
-                scale: { min: 1, max: 7, labels: ['Very Difficult', 'Very Easy'] },
-                hasConfidence: true
-            },
-
-            // Page 3: Information Retrieval with Static Images (Questions 6-10)
-            {
-                id: 'q6',
-                page: 3,
-                category: 'information_retrieval',
-                type: 'multiple_choice',
-                question: 'Looking at the highlighted pattern in the image, how many instances show Speaker A responding directly to Speaker B\'s questions?',
-                options: [
-                    { value: '2-3', text: '2-3 instances' },
-                    { value: '4-5', text: '4-5 instances' },
-                    { value: '6-7', text: '6-7 instances' },
-                    { value: '8+', text: '8 or more instances' }
-                ],
-                hasConfidence: true,
-                isStaticImage: true
-            },
-            {
-                id: 'q7',
-                page: 3,
-                category: 'information_retrieval',
-                type: 'multiple_choice',
-                question: 'Can you identify a moment where you disagree with the AI interpretation shown in the visualization?',
-                options: [
-                    { value: 'agree-all', text: 'I agree with all AI interpretations shown' },
-                    { value: 'disagree-connections', text: 'I disagree with some connection strengths' },
-                    { value: 'disagree-importance', text: 'I disagree with node importance rankings' },
-                    { value: 'disagree-categories', text: 'I disagree with topic categorizations' }
-                ],
-                hasConfidence: true,
-                isStaticImage: true
-            },
-
-            // Page 4: Sensemaking (Questions 8-12)
-            {
-                id: 'q8',
-                page: 4,
-                category: 'sensemaking',
-                type: 'textarea',
-                question: 'Looking at this conversation between two students, identify conversation segments that show productive challenge-response cycles. Describe what makes these exchanges productive.',
-                placeholder: 'Describe the productive challenge-response patterns you observe...',
-                hasConfidence: true
-            },
-            {
-                id: 'q9',
-                page: 4,
-                category: 'sensemaking',
-                type: 'multiple_choice',
-                question: 'Which conversation pattern indicates the strongest collaborative dynamic?',
-                options: [
-                    { value: 'building-ideas', text: 'Building on each other\'s ideas about bike paths' },
-                    { value: 'sharing-experiences', text: 'Sharing similar campus transportation experiences' },
-                    { value: 'problem-solving', text: 'Joint problem-solving about shuttle issues' },
-                    { value: 'validation', text: 'Validating each other\'s suggestions' }
-                ],
-                hasConfidence: true
-            },
-
-            // Page 5: Actionable Intelligence (Questions 13-17)
-            {
-                id: 'q10',
-                page: 5,
-                category: 'actionable_intelligence',
-                type: 'multiple_choice',
-                question: 'If a facilitator wanted to optimize this collaboration, what type of intervention would be most appropriate?',
-                options: [
-                    { value: 'provide-info', text: 'Provide additional information about campus transportation data' },
-                    { value: 'encourage-interaction', text: 'Encourage more direct peer interaction and idea building' },
-                    { value: 'redirect-focus', text: 'Redirect conversation to more concrete implementation steps' },
-                    { value: 'no-intervention', text: 'No intervention needed - collaboration is already optimal' }
-                ],
-                hasConfidence: true
-            },
-            {
-                id: 'q11',
-                page: 5,
-                category: 'actionable_intelligence',
-                type: 'ranking',
-                question: 'Rank these conversation moments by priority for facilitator attention (1 = highest priority):',
-                items: [
-                    { id: 'shuttle-complaint', text: 'Speaker A\'s shuttle system complaints' },
-                    { id: 'bike-path-idea', text: 'Initial bike path brainstorming' },
-                    { id: 'network-theory', text: 'Discussion of network theory concepts' },
-                    { id: 'implementation-start', text: 'Beginning of actual project implementation' }
-                ],
-                hasConfidence: true
-            },
-
-            // Page 6: Trust/AI Sentiment (Questions 18-22)
-            {
-                id: 'q12',
-                page: 6,
-                category: 'trust',
-                type: 'likert',
-                question: 'How much do you trust the AI system\'s interpretation of conversation dynamics shown in the visualization?',
-                scale: { min: 1, max: 7, labels: ['No Trust', 'Complete Trust'] },
+                category: 'pattern_recognition',
+                type: 'slider',
+                question: 'Rate how clearly you can see cycles of agreement and disagreement:',
+                scale: { min: 0, max: 10, step: 1, unit: '' },
                 hasConfidence: false
             },
             {
-                id: 'q13',
-                page: 6,
-                category: 'trust',
+                id: 'q5_curiosity',
+                page: 2,
+                category: 'pattern_recognition', 
+                type: 'slider',
+                question: 'Rate how clearly you can see curiosity clustering:',
+                scale: { min: 0, max: 10, step: 1, unit: '' },
+                hasConfidence: false
+            },
+            {
+                id: 'q5_uncertainty',
+                page: 2,
+                category: 'pattern_recognition',
+                type: 'slider',
+                question: 'Rate how clearly you can see uncertainty leading to exploration:',
+                scale: { min: 0, max: 10, step: 1, unit: '' },
+                hasConfidence: false
+            },
+            {
+                id: 'q5_building',
+                page: 2,
+                category: 'pattern_recognition',
+                type: 'slider',
+                question: 'Rate how clearly you can see collaborative building after challenges:',
+                scale: { min: 0, max: 10, step: 1, unit: '' },
+                hasConfidence: false
+            },
+
+            // Page 3: Cognitive Load + Learning Relationships
+            {
+                id: 'q7_mental',
+                page: 3,
+                category: 'cognitive_load',
+                type: 'slider',
+                question: 'Mental Demand (0=Low, 10=High):',
+                scale: { min: 0, max: 10, step: 1, unit: '' },
+                hasConfidence: false
+            },
+            {
+                id: 'q8_effort',
+                page: 3,
+                category: 'cognitive_load',
+                type: 'slider',
+                question: 'Effort Required (0=Low, 10=High):',
+                scale: { min: 0, max: 10, step: 1, unit: '' },
+                hasConfidence: false
+            },
+            {
+                id: 'q11',
+                page: 3,
+                category: 'learning_relationships',
                 type: 'multiple_choice',
-                question: 'Which aspect of the AI interpretation seems most reliable?',
+                question: 'What pattern most commonly led to increased curiosity?',
                 options: [
-                    { value: 'speaker-identification', text: 'Speaker identification and roles' },
-                    { value: 'topic-extraction', text: 'Topic extraction and categorization' },
-                    { value: 'relationship-mapping', text: 'Relationship mapping between concepts' },
-                    { value: 'temporal-flow', text: 'Temporal flow and conversation progression' }
+                    { value: 'agreement-curiosity', text: 'Agreement → Agreement → Curiosity' },
+                    { value: 'challenge-uncertainty-curiosity', text: 'Challenge → Uncertainty → Curiosity' },
+                    { value: 'disagreement-resolution-curiosity', text: 'Disagreement → Resolution → Curiosity' },
+                    { value: 'idea-building-curiosity', text: 'New idea → Building → Curiosity' }
                 ],
                 hasConfidence: true
+            },
+
+            // Page 4: Temporal Understanding + Actionable Intelligence  
+            {
+                id: 'q16',
+                page: 4,
+                category: 'temporal_understanding',
+                type: 'multiple_select',
+                question: 'Which interaction sequences appear in this conversation? (Check all that apply):',
+                options: [
+                    { value: 'uncertainty-curiosity-idea', text: 'Uncertainty → Curiosity → New Idea' },
+                    { value: 'disagreement-agreement-building', text: 'Disagreement → Agreement → Building' },
+                    { value: 'challenge-uncertainty-exploration', text: 'Challenge → Uncertainty → Exploration' },
+                    { value: 'building-momentum', text: 'Building → Building → Building (momentum)' },
+                    { value: 'curiosity-question-answer-agreement', text: 'Curiosity → Question → Answer → Agreement' }
+                ],
+                hasConfidence: true
+            },
+            {
+                id: 'q18',
+                page: 4,
+                category: 'actionable_intelligence',
+                type: 'slider',
+                question: 'Imagine being a tutor or facilitator for this conversation. What would be an ideal point to drop in and support the conversation? Mark your optimal intervention point:',
+                scale: { min: 0, max: 100, step: 1, unit: '% through conversation' },
+                hasConfidence: false
+            },
+            {
+                id: 'q19',
+                page: 4,
+                category: 'actionable_intelligence',
+                type: 'multiple_choice',
+                question: 'Why this intervention point?',
+                options: [
+                    { value: 'curiosity-declining', text: 'Curiosity declining - needs boost' },
+                    { value: 'uncertainty-unresolved', text: 'Uncertainty unresolved - needs guidance' },
+                    { value: 'disagreement-escalating', text: 'Disagreement escalating - needs moderation' },
+                    { value: 'momentum-stalling', text: 'Momentum stalling - needs energy' },
+                    { value: 'going-well', text: 'Going well - needs validation' }
+                ],
+                hasConfidence: true
+            },
+
+            // Page 5: AI Trust + Overall Assessment
+            {
+                id: 'q26',
+                page: 5,
+                category: 'ai_trust',
+                type: 'slider',
+                question: 'Transcript segments examined:',
+                scale: { min: 0, max: 10, step: 1, unit: ' segments' },
+                hasConfidence: false
+            },
+            {
+                id: 'q27',
+                page: 5,
+                category: 'ai_trust',
+                type: 'slider',
+                question: 'Agreement with AI classifications:',
+                scale: { min: 0, max: 100, step: 1, unit: '% agreement' },
+                hasConfidence: false
+            },
+            {
+                id: 'q22',
+                page: 5,
+                category: 'overall_assessment',
+                type: 'slider',
+                question: 'Overall conversation productivity:',
+                scale: { min: 0, max: 100, step: 1, unit: '% productive' },
+                hasConfidence: false
+            },
+
+            // Page 6: Demographics + Final Questions
+            {
+                id: 'q37',
+                page: 6,
+                category: 'utility',
+                type: 'slider',
+                question: 'Visualization usefulness for educational tasks:',
+                scale: { min: 0, max: 100, step: 1, unit: '% useful' },
+                hasConfidence: false
+            },
+            {
+                id: 'q38',
+                page: 6,
+                category: 'utility',
+                type: 'multiple_choice',
+                question: 'What specific insight did you gain? (Select ONE):',
+                options: [
+                    { value: 'relationship-patterns', text: 'Relationship patterns between interaction types' },
+                    { value: 'temporal-flow', text: 'Temporal flow and progression' },
+                    { value: 'intervention-moments', text: 'Critical intervention moments' },
+                    { value: 'productivity-indicators', text: 'Productivity indicators' },
+                    { value: 'participation-dynamics', text: 'Participation dynamics' },
+                    { value: 'none', text: 'None of the above' }
+                ],
+                hasConfidence: true
+            },
+            {
+                id: 'demographics_age',
+                page: 6,
+                category: 'demographics',
+                type: 'multiple_choice',
+                question: 'Age:',
+                options: [
+                    { value: '18-24', text: '18-24' },
+                    { value: '25-34', text: '25-34' },
+                    { value: '35-44', text: '35-44' },
+                    { value: '45-54', text: '45-54' },
+                    { value: '55+', text: '55+' }
+                ],
+                hasConfidence: false
             }
         ];
     }
@@ -207,6 +257,17 @@ class SurveyQuestion {
         this.currentQuestions = this.getCurrentPageQuestions();
         container.innerHTML = '';
 
+        // Add introduction text for first page
+        if (this.currentPage === 1) {
+            const introDiv = document.createElement('div');
+            introDiv.className = 'survey-introduction';
+            introDiv.innerHTML = `
+                <p><strong>Introduction:</strong> The above is a representation of a conversation between two university-age students completing a homework project together on the topic of graph theory.</p>
+                <hr style="margin: 1.5rem 0;">
+            `;
+            container.appendChild(introDiv);
+        }
+
         this.currentQuestions.forEach(question => {
             const questionElement = this.createQuestionElement(question);
             container.appendChild(questionElement);
@@ -223,7 +284,7 @@ class SurveyQuestion {
         questionDiv.id = `question-${question.id}`;
 
         let html = `
-            <h3>Question ${this.getQuestionNumber(question.id)} of 13 (Page ${question.page} of ${this.totalPages}) - ${this.getCategoryLabel(question.category)}</h3>
+            <h3>Question ${this.getQuestionNumber(question.id)} of 19 (Page ${question.page} of ${this.totalPages})</h3>
             <p>${question.question}</p>
         `;
 
@@ -247,6 +308,10 @@ class SurveyQuestion {
         switch (question.type) {
             case 'multiple_choice':
                 return this.createMultipleChoiceInput(question);
+            case 'multiple_select':
+                return this.createMultipleSelectInput(question);
+            case 'slider':
+                return this.createSliderInput(question);
             case 'likert':
                 return this.createLikertInput(question);
             case 'textarea':
@@ -308,6 +373,52 @@ class SurveyQuestion {
             `;
         });
         html += '</div>';
+        return html;
+    }
+
+    createMultipleSelectInput(question) {
+        let html = '<div class="options multiple-select">';
+        question.options.forEach(option => {
+            html += `
+                <label class="option">
+                    <input type="checkbox" name="${question.id}" value="${option.value}">
+                    ${option.text}
+                </label>
+            `;
+        });
+        html += '</div>';
+        return html;
+    }
+
+    createSliderInput(question) {
+        const { min, max, step, unit } = question.scale;
+        const defaultValue = Math.round((min + max) / 2);
+        const unitText = unit ? ` ${unit}` : '';
+        
+        let html = '<div class="slider-container">';
+        html += `<input type="range" name="${question.id}" min="${min}" max="${max}" step="${step}" value="${defaultValue}" class="question-slider">`;
+        html += `<div class="slider-value">Current value: <span id="${question.id}_value">${defaultValue}</span>${unitText}</div>`;
+        html += `<div class="slider-labels">
+            <span>${min}${unitText}</span>
+            <span style="margin-left: auto;">${max}${unitText}</span>
+        </div>`;
+        html += '</div>';
+        
+        // Add script to update value display
+        html += `
+            <script>
+                (function() {
+                    const slider = document.querySelector('input[name="${question.id}"]');
+                    const valueDisplay = document.getElementById('${question.id}_value');
+                    if (slider && valueDisplay) {
+                        slider.addEventListener('input', function() {
+                            valueDisplay.textContent = this.value;
+                        });
+                    }
+                })();
+            </script>
+        `;
+        
         return html;
     }
 
@@ -475,12 +586,18 @@ class SurveyQuestion {
     }
 
     getCategoryLabel(category) {
+        // No longer used in participant display, but kept for potential debugging
         const labels = {
-            'effectiveness': 'Visualization Effectiveness',
-            'information_retrieval': 'Information Retrieval',
-            'sensemaking': 'Sensemaking',
+            'effectiveness': 'Visual Comprehension',
+            'pattern_recognition': 'Pattern Recognition',
+            'cognitive_load': 'Cognitive Load',
+            'learning_relationships': 'Learning Relationships',
+            'temporal_understanding': 'Temporal Understanding',
             'actionable_intelligence': 'Actionable Intelligence',
-            'trust': 'AI Trust & Sentiment'
+            'ai_trust': 'AI Trust',
+            'overall_assessment': 'Overall Assessment',
+            'utility': 'Utility',
+            'demographics': 'Demographics'
         };
         return labels[category] || category;
     }
